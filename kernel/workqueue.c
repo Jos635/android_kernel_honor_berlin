@@ -3699,7 +3699,7 @@ int apply_workqueue_attrs(struct workqueue_struct *wq,
 		apply_wqattrs_commit(ctx);
 		ret = 0;
 	}
-
+	
 	mutex_unlock(&wq_pool_mutex);
 	put_online_cpus();
 
