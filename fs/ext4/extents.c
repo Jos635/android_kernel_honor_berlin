@@ -4818,7 +4818,6 @@ static long ext4_zero_range(struct file *file, loff_t offset,
 	if (max_blocks > 0) {
 		flags |= (EXT4_GET_BLOCKS_CONVERT_UNWRITTEN |
 			  EXT4_EX_NOCACHE);
-
 		/*
 		 * Prevent page faults from reinstantiating pages we have
 		 * released from page cache.
