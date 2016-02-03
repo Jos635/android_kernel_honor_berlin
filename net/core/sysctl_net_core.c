@@ -445,6 +445,15 @@ static struct ctl_table net_core_table[] = {
 #endif /* CONFIG_HW_CROSSLAYER_OPT_DBG_MODULE */
 	/*lint -restore */
 #endif /* CONFIG_HW_CROSSLAYER_OPT */
+	{
+		.procname	= "max_skb_frags",
+		.data		= &sysctl_max_skb_frags,
+		.maxlen		= sizeof(int),
+		.mode		= 0644,
+		.proc_handler	= proc_dointvec_minmax,
+		.extra1		= &one,
+		.extra2		= &max_skb_frags,
+	},
 	{ }
 };
 
